@@ -102,7 +102,7 @@ sitemap default label="Home"
 		}
 	}
 
-	Text label "Devices" {
+	Text label="Devices" {
 		Frame {
 			Switch item=Presence_Mobile_AD label="Anton's Mobile"
 		}
