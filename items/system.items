@@ -1,0 +1,70 @@
+Group  System_Temperature_Chart (System, Charts)
+Number System_Temperature_Chart_Period "Periode" (System)
+Number System_Temperature_CPU "Temperature CPU [%.1f °C]" <temperature> (System_Temperature_Chart) { exec="<[cat /sys/class/thermal/thermal_zone0/temp:60000:JS(milli.js)]" }
+Number System_Temperature_GPU "Temperature GPU [%.1f °C]" <temperature> (System_Temperature_Chart) { exec="<[/opt/vc/bin/vcgencmd measure_temp:60000:REGEX(temp=(.*?)'C)]" }
+
+/* Network information*/
+String Network_AdapterName          { channel="systeminfo:computer:openHABianPi:network#networkDisplayName" }
+String Network_Name                 { channel="systeminfo:computer:openHABianPi:network#networkName" }
+String Network_IP                   { channel="systeminfo:computer:openHABianPi:network#ip" }
+String Network_Mac                  { channel="systeminfo:computer:openHABianPi:network#mac" }
+Number Network_DataSent             { channel="systeminfo:computer:openHABianPi:network#dataSent" }
+Number Network_DataRecevied         { channel="systeminfo:computer:openHABianPi:network#dataReceived" }
+Number Network_PackagesSent         { channel="systeminfo:computer:openHABianPi:network#packagesSent" }
+Number Network_PackagesRecevied     { channel="systeminfo:computer:openHABianPi:network#packagesReceived" }
+
+/* CPU information*/
+String CPU_Name                     { channel="systeminfo:computer:work:cpu#name" }
+String CPU_Description              { channel="systeminfo:computer:work:cpu#description" }
+Number CPU_Load                     { channel="systeminfo:computer:work:cpu#load"} 
+Number CPU_Load1                    { channel="systeminfo:computer:work:cpu#load1" }
+Number CPU_Load5                    { channel="systeminfo:computer:work:cpu#load5" }
+Number CPU_Load15                   { channel="systeminfo:computer:work:cpu#load15" }
+Number CPU_Threads                  { channel="systeminfo:computer:work:cpu#threads" }
+Number CPU_Uptime                   { channel="systeminfo:computer:work:cpu#uptime" }
+
+/* Drive information*/
+String Drive_Name                    { channel="systeminfo:computer:work:drive#name" }
+String Drive_Model                   { channel="systeminfo:computer:work:drive#model" }
+String Drive_Serial                  { channel="systeminfo:computer:work:drive#serial" }
+
+/* Storage information*/
+String Storage_Name                  { channel="systeminfo:computer:work:storage#name" }
+String Storage_Type                  { channel="systeminfo:computer:work:storage#type" }
+String Storage_Description           { channel="systeminfo:computer:work:storage#description" }
+Number Storage_Available             { channel="systeminfo:computer:work:storage#available" }
+Number Storage_Used                  { channel="systeminfo:computer:work:storage#used" }
+Number Storage_Total                 { channel="systeminfo:computer:work:storage#total" }
+Number Storage_Available_Percent     { channel="systeminfo:computer:work:storage#availablePercent" }
+
+/* Memory information*/
+Number Memory_Available              { channel="systeminfo:computer:work:memory#available" }
+Number Memory_Used                   { channel="systeminfo:computer:work:memory#used" }
+Number Memory_Total                  { channel="systeminfo:computer:work:memory#total" }
+Number Memory_Available_Percent      { channel="systeminfo:computer:work:memory#availablePercent" }
+
+/* Swap memory information*/
+Number Swap_Available                { channel="systeminfo:computer:work:swap#available" }
+Number Swap_Used                     { channel="systeminfo:computer:work:swap#used" }
+Number Swap_Total                    { channel="systeminfo:computer:work:swap#total" }
+Number Swap_Available_Percent        { channel="systeminfo:computer:work:swap#availablePercent" }
+
+/* Battery information*/
+String Battery_Name                  { channel="systeminfo:computer:work:battery#name" }
+Number Battery_RemainingCapacity     { channel="systeminfo:computer:work:battery#remainingCapacity" }
+Number Battery_RemainingTime         { channel="systeminfo:computer:work:battery#remainingTime" }
+
+/* Display information*/
+String Display_Description           { channel="systeminfo:computer:work:display#information" }
+
+/* Sensors information*/
+Number Sensor_CPUTemp                { channel="systeminfo:computer:work:sensors#cpuTemp" }
+Number Sensor_CPUVoltage             { channel="systeminfo:computer:work:sensors#cpuVoltage" }
+Number Sensor_FanSpeed               { channel="systeminfo:computer:work:sensors#fanSpeed" }
+
+/* Process information*/
+Number Process_load                  { channel="systeminfo:computer:SvilenV-L540:process#load" }
+Number Process_used                  { channel="systeminfo:computer:SvilenV-L540:process#used" }
+String Process_name                  { channel="systeminfo:computer:SvilenV-L540:process#name" }
+Number Process_threads               { channel="systeminfo:computer:SvilenV-L540:process#threads" }
+String Process_path                  { channel="systeminfo:computer:SvilenV-L540:process#path" }

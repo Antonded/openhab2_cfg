@@ -1,0 +1,91 @@
+sitemap default label="Home"
+{
+	Text item=System_Temperature_CPU label="Temperature [%.1f °C]" {
+		Frame {
+			Text item=System_Temperature_CPU					
+			Text item=System_Temperature_GPU
+		}
+		Frame {
+			Switch item=System_Temperature_Chart_Period mappings=[0="1h", 1="4h", 2="8h", 3="12h", 4="24h"]
+			Chart  item=System_Temperature_Chart period=h   refresh=60000 visibility=[System_Temperature_Chart_Period==0, System_Temperature_Chart_Period=="Uninitialized"]
+			Chart  item=System_Temperature_Chart period=4h  refresh=60000 visibility=[System_Temperature_Chart_Period==1]
+			Chart  item=System_Temperature_Chart period=8h  refresh=60000 visibility=[System_Temperature_Chart_Period==2]
+			Chart  item=System_Temperature_Chart period=12h refresh=60000 visibility=[System_Temperature_Chart_Period==3]
+			Chart  item=System_Temperature_Chart period=D   refresh=60000 visibility=[System_Temperature_Chart_Period==4]
+		}
+	}	
+
+    Switch item=Presence_Mobile_AD label="Anton's Mobile"
+//    Switch item=LOCK label="LOCK"
+    Switch item=RELAY1 label="RELAY1"
+    Switch item=RELAY2 label="RELAY2"
+    Switch item=RELAY3 label="RELAY3"
+    Switch item=RELAY4 label="RELAY4"
+    Switch item=RELAY5 label="RELAY5"
+    Switch item=RELAY6 label="RELAY6"
+    Switch item=RELAY7 label="RELAY7"
+    Switch item=RELAY8 label="RELAY8"
+
+
+//Number RaspberryCPUTemp "Temperatur RPi2 [%.1f °C]" { channel="systeminfo:computer:openHABianPi:sensors#cpuTemp" }
+Text item=RaspberryCPUTemp label="Temperature (rPi) [%.1f °C]"
+	
+Text item=Network_AdapterName label="Network_AdapterName [%s]"
+	Text item=Network_Name label="Network_Name [%s]"
+       Text item=Network_IP label="Network_IP [%s]"
+Text item=Network_Mac label="Network_Mac [%s]"
+Text item=Network_DataSent label="Network_DataSent [%d]"
+Text item=Network_DataRecevied label="Network_DataRecevied [%d]"
+Text item=Network_PackagesSent label="Network_PackagesSent [%d]"
+Text item=Network_PackagesRecevied label="Network_PackagesRecevied [%d]"
+
+/*
+Text item=CPU_Name
+Text item=CPU_Description 
+Text item=CPU_Load
+Text item=CPU_Load1
+Text item=CPU_Load5 
+Text item=CPU_Load15
+Text item=CPU_Threads 
+Text item=CPU_Uptime 
+
+Text item=Drive_Name
+Text item=Drive_Model
+Text item=Drive_Serial
+
+Text item=Storage_Name
+Text item=Storage_Type
+Text item=Storage_Description
+Text item=Storage_Available
+Text item=Storage_Used
+Text item=Storage_Total
+Text item=Storage_Available_Percent
+
+Text item=Memory_Available
+Text item=Memory_Used 
+Text item=Memory_Total
+Text item=Memory_Available_Percent
+
+Text item=Swap_Available
+Text item=Swap_Used
+Text item=Swap_Total
+Text item=Swap_Available_Percent
+
+Text item=Battery_Name
+Text item=Battery_RemainingCapacity
+Text item=Battery_RemainingTime
+
+Text item=Display_Description
+
+Text item=Sensor_CPUTemp
+Text item=Sensor_CPUVoltage
+Text item=Sensor_FanSpeed
+
+Text item=Process_load
+Text item=Process_used
+Text item=Process_name
+Text item=Process_threads
+Text item=Process_path
+*/
+
+}
