@@ -1,70 +1,70 @@
 Group  System_Temperature_Chart (System, Charts)
-Number System_Temperature_Chart_Period "Periode" (System)
+Number System_Temperature_Chart_Period "Period" (System)
 Number System_Temperature_CPU "Temperature CPU [%.1f °C]" <temperature> (System_Temperature_Chart) { exec="<[cat /sys/class/thermal/thermal_zone0/temp:60000:JS(milli.js)]" }
 Number System_Temperature_GPU "Temperature GPU [%.1f °C]" <temperature> (System_Temperature_Chart) { exec="<[/opt/vc/bin/vcgencmd measure_temp:60000:REGEX(temp=(.*?)'C)]" }
 
 /* Network information*/
-String Network_AdapterName          { channel="systeminfo:computer:openHABianPi:network#networkDisplayName" }
-String Network_Name                 { channel="systeminfo:computer:openHABianPi:network#networkName" }
-String Network_IP                   { channel="systeminfo:computer:openHABianPi:network#ip" }
-String Network_Mac                  { channel="systeminfo:computer:openHABianPi:network#mac" }
-Number Network_DataSent             { channel="systeminfo:computer:openHABianPi:network#dataSent" }
-Number Network_DataRecevied         { channel="systeminfo:computer:openHABianPi:network#dataReceived" }
-Number Network_PackagesSent         { channel="systeminfo:computer:openHABianPi:network#packagesSent" }
-Number Network_PackagesRecevied     { channel="systeminfo:computer:openHABianPi:network#packagesReceived" }
+String Network_AdapterName      { channel="systeminfo:computer:openHABianPi:network#networkDisplayName" }
+String Network_Name             { channel="systeminfo:computer:openHABianPi:network#networkName" }
+String Network_IP               { channel="systeminfo:computer:openHABianPi:network#ip" }
+String Network_Mac              { channel="systeminfo:computer:openHABianPi:network#mac" }
+Number Network_DataSent         { channel="systeminfo:computer:openHABianPi:network#dataSent" }
+Number Network_DataReceived     { channel="systeminfo:computer:openHABianPi:network#dataReceived" }
+Number Network_PackagesSent     { channel="systeminfo:computer:openHABianPi:network#packagesSent" }
+Number Network_PackagesReceived { channel="systeminfo:computer:openHABianPi:network#packagesReceived" }
 
 /* CPU information*/
-String CPU_Name                     { channel="systeminfo:computer:openHABianPi:cpu#name" }
-String CPU_Description              { channel="systeminfo:computer:openHABianPi:cpu#description" }
-Number CPU_Load                     { channel="systeminfo:computer:openHABianPi:cpu#load"}
-Number CPU_Load1                    { channel="systeminfo:computer:openHABianPi:cpu#load1" }
-Number CPU_Load5                    { channel="systeminfo:computer:openHABianPi:cpu#load5" }
-Number CPU_Load15                   { channel="systeminfo:computer:openHABianPi:cpu#load15" }
-Number CPU_Threads                  { channel="systeminfo:computer:openHABianPi:cpu#threads" }
-Number CPU_Uptime                   { channel="systeminfo:computer:openHABianPi:cpu#uptime" }
+String CPU_Name                 { channel="systeminfo:computer:openHABianPi:cpu#name" }
+String CPU_Description          { channel="systeminfo:computer:openHABianPi:cpu#description" }
+Number CPU_Load                 { channel="systeminfo:computer:openHABianPi:cpu#load"}
+Number CPU_Load1                { channel="systeminfo:computer:openHABianPi:cpu#load1" }
+Number CPU_Load5                { channel="systeminfo:computer:openHABianPi:cpu#load5" }
+Number CPU_Load15               { channel="systeminfo:computer:openHABianPi:cpu#load15" }
+Number CPU_Threads              { channel="systeminfo:computer:openHABianPi:cpu#threads" }
+Number CPU_Uptime               { channel="systeminfo:computer:openHABianPi:cpu#uptime" }
 
 /* Drive information*/
-String Drive_Name                    { channel="systeminfo:computer:openHABianPi:drive#name" }
-String Drive_Model                   { channel="systeminfo:computer:openHABianPi:drive#model" }
-String Drive_Serial                  { channel="systeminfo:computer:openHABianPi:drive#serial" }
+String Drive_Name                { channel="systeminfo:computer:openHABianPi:drive#name" }
+String Drive_Model               { channel="systeminfo:computer:openHABianPi:drive#model" }
+String Drive_Serial              { channel="systeminfo:computer:openHABianPi:drive#serial" }
 
 /* Storage information*/
-String Storage_Name                  { channel="systeminfo:computer:openHABianPi:storage#name" }
-String Storage_Type                  { channel="systeminfo:computer:openHABianPi:storage#type" }
-String Storage_Description           { channel="systeminfo:computer:openHABianPi:storage#description" }
-Number Storage_Available             { channel="systeminfo:computer:openHABianPi:storage#available" }
-Number Storage_Used                  { channel="systeminfo:computer:openHABianPi:storage#used" }
-Number Storage_Total                 { channel="systeminfo:computer:openHABianPi:storage#total" }
-Number Storage_Available_Percent     { channel="systeminfo:computer:openHABianPi:storage#availablePercent" }
+String Storage_Name              { channel="systeminfo:computer:openHABianPi:storage#name" }
+String Storage_Type              { channel="systeminfo:computer:openHABianPi:storage#type" }
+String Storage_Description       { channel="systeminfo:computer:openHABianPi:storage#description" }
+Number Storage_Available         { channel="systeminfo:computer:openHABianPi:storage#available" }
+Number Storage_Used              { channel="systeminfo:computer:openHABianPi:storage#used" }
+Number Storage_Total             { channel="systeminfo:computer:openHABianPi:storage#total" }
+Number Storage_Available_Percent { channel="systeminfo:computer:openHABianPi:storage#availablePercent" }
 
 /* Memory information*/
-Number Memory_Available              { channel="systeminfo:computer:openHABianPi:memory#available" }
-Number Memory_Used                   { channel="systeminfo:computer:openHABianPi:memory#used" }
-Number Memory_Total                  { channel="systeminfo:computer:openHABianPi:memory#total" }
-Number Memory_Available_Percent      { channel="systeminfo:computer:openHABianPi:memory#availablePercent" }
+Number Memory_Available          { channel="systeminfo:computer:openHABianPi:memory#available" }
+Number Memory_Used               { channel="systeminfo:computer:openHABianPi:memory#used" }
+Number Memory_Total              { channel="systeminfo:computer:openHABianPi:memory#total" }
+Number Memory_Available_Percent  { channel="systeminfo:computer:openHABianPi:memory#availablePercent" }
 
 /* Swap memory information*/
-Number Swap_Available                { channel="systeminfo:computer:wopenHABianPiork:swap#available" }
-Number Swap_Used                     { channel="systeminfo:computer:openHABianPi:swap#used" }
-Number Swap_Total                    { channel="systeminfo:computer:openHABianPi:swap#total" }
-Number Swap_Available_Percent        { channel="systeminfo:computer:openHABianPi:swap#availablePercent" }
+Number Swap_Available            { channel="systeminfo:computer:wopenHABianPiork:swap#available" }
+Number Swap_Used                 { channel="systeminfo:computer:openHABianPi:swap#used" }
+Number Swap_Total                { channel="systeminfo:computer:openHABianPi:swap#total" }
+Number Swap_Available_Percent    { channel="systeminfo:computer:openHABianPi:swap#availablePercent" }
 
 /* Battery information*/
-String Battery_Name                  { channel="systeminfo:computer:openHABianPi:battery#name" }
-Number Battery_RemainingCapacity     { channel="systeminfo:computer:openHABianPi:battery#remainingCapacity" }
-Number Battery_RemainingTime         { channel="systeminfo:computer:openHABianPi:battery#remainingTime" }
+String Battery_Name              { channel="systeminfo:computer:openHABianPi:battery#name" }
+Number Battery_RemainingCapacity { channel="systeminfo:computer:openHABianPi:battery#remainingCapacity" }
+Number Battery_RemainingTime     { channel="systeminfo:computer:openHABianPi:battery#remainingTime" }
 
 /* Display information*/
-String Display_Description           { channel="systeminfo:computer:openHABianPi:display#information" }
+String Display_Description       { channel="systeminfo:computer:openHABianPi:display#information" }
 
 /* Sensors information*/
-Number Sensor_CPUTemp                { channel="systeminfo:computer:openHABianPi:sensors#cpuTemp" }
-Number Sensor_CPUVoltage             { channel="systeminfo:computer:openHABianPi:sensors#cpuVoltage" }
-Number Sensor_FanSpeed               { channel="systeminfo:computer:openHABianPi:sensors#fanSpeed" }
+Number Sensor_CPUTemp            { channel="systeminfo:computer:openHABianPi:sensors#cpuTemp" }
+Number Sensor_CPUVoltage         { channel="systeminfo:computer:openHABianPi:sensors#cpuVoltage" }
+Number Sensor_FanSpeed           { channel="systeminfo:computer:openHABianPi:sensors#fanSpeed" }
 
 /* Process information*/
-Number Process_load                  { channel="systeminfo:computer:openHABianPi:process#load" }
-Number Process_used                  { channel="systeminfo:computer:openHABianPi:process#used" }
-String Process_name                  { channel="systeminfo:computer:openHABianPi:process#name" }
-Number Process_threads               { channel="systeminfo:computer:openHABianPi:process#threads" }
-String Process_path                  { channel="systeminfo:computer:openHABianPi:process#path" }
+Number Process_load              { channel="systeminfo:computer:openHABianPi:process#load" }
+Number Process_used              { channel="systeminfo:computer:openHABianPi:process#used" }
+String Process_name              { channel="systeminfo:computer:openHABianPi:process#name" }
+Number Process_threads           { channel="systeminfo:computer:openHABianPi:process#threads" }
+String Process_path              { channel="systeminfo:computer:openHABianPi:process#path" }

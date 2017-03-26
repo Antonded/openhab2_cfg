@@ -1,7 +1,7 @@
 sitemap default label="Home"
 {
 
-	Text item=CPU_Uptime label="System [%d]" {
+	Text item=CPU_Uptime label="System [%s]" <temperature> {
 
 		Text item=System_Temperature_CPU label="Temperature [%.1f °C]" {
 
