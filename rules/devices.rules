@@ -1,0 +1,6 @@
+rule "AD-phone"
+when
+	Switch Presence_Mobile_AD is changed [from 1] [to 0]
+then
+	
+end
