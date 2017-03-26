@@ -14,57 +14,57 @@ Number Network_PackagesSent         { channel="systeminfo:computer:openHABianPi:
 Number Network_PackagesRecevied     { channel="systeminfo:computer:openHABianPi:network#packagesReceived" }
 
 /* CPU information*/
-String CPU_Name                     { channel="systeminfo:computer:work:cpu#name" }
-String CPU_Description              { channel="systeminfo:computer:work:cpu#description" }
-Number CPU_Load                     { channel="systeminfo:computer:work:cpu#load"} 
-Number CPU_Load1                    { channel="systeminfo:computer:work:cpu#load1" }
-Number CPU_Load5                    { channel="systeminfo:computer:work:cpu#load5" }
-Number CPU_Load15                   { channel="systeminfo:computer:work:cpu#load15" }
-Number CPU_Threads                  { channel="systeminfo:computer:work:cpu#threads" }
-Number CPU_Uptime                   { channel="systeminfo:computer:work:cpu#uptime" }
+String CPU_Name                     { channel="systeminfo:computer:openHABianPi:cpu#name" }
+String CPU_Description              { channel="systeminfo:computer:openHABianPi:cpu#description" }
+Number CPU_Load                     { channel="systeminfo:computer:openHABianPi:cpu#load"}
+Number CPU_Load1                    { channel="systeminfo:computer:openHABianPi:cpu#load1" }
+Number CPU_Load5                    { channel="systeminfo:computer:openHABianPi:cpu#load5" }
+Number CPU_Load15                   { channel="systeminfo:computer:openHABianPi:cpu#load15" }
+Number CPU_Threads                  { channel="systeminfo:computer:openHABianPi:cpu#threads" }
+Number CPU_Uptime                   { channel="systeminfo:computer:openHABianPi:cpu#uptime" }
 
 /* Drive information*/
-String Drive_Name                    { channel="systeminfo:computer:work:drive#name" }
-String Drive_Model                   { channel="systeminfo:computer:work:drive#model" }
-String Drive_Serial                  { channel="systeminfo:computer:work:drive#serial" }
+String Drive_Name                    { channel="systeminfo:computer:openHABianPi:drive#name" }
+String Drive_Model                   { channel="systeminfo:computer:openHABianPi:drive#model" }
+String Drive_Serial                  { channel="systeminfo:computer:openHABianPi:drive#serial" }
 
 /* Storage information*/
-String Storage_Name                  { channel="systeminfo:computer:work:storage#name" }
-String Storage_Type                  { channel="systeminfo:computer:work:storage#type" }
-String Storage_Description           { channel="systeminfo:computer:work:storage#description" }
-Number Storage_Available             { channel="systeminfo:computer:work:storage#available" }
-Number Storage_Used                  { channel="systeminfo:computer:work:storage#used" }
-Number Storage_Total                 { channel="systeminfo:computer:work:storage#total" }
-Number Storage_Available_Percent     { channel="systeminfo:computer:work:storage#availablePercent" }
+String Storage_Name                  { channel="systeminfo:computer:openHABianPi:storage#name" }
+String Storage_Type                  { channel="systeminfo:computer:openHABianPi:storage#type" }
+String Storage_Description           { channel="systeminfo:computer:openHABianPi:storage#description" }
+Number Storage_Available             { channel="systeminfo:computer:openHABianPi:storage#available" }
+Number Storage_Used                  { channel="systeminfo:computer:openHABianPi:storage#used" }
+Number Storage_Total                 { channel="systeminfo:computer:openHABianPi:storage#total" }
+Number Storage_Available_Percent     { channel="systeminfo:computer:openHABianPi:storage#availablePercent" }
 
 /* Memory information*/
-Number Memory_Available              { channel="systeminfo:computer:work:memory#available" }
-Number Memory_Used                   { channel="systeminfo:computer:work:memory#used" }
-Number Memory_Total                  { channel="systeminfo:computer:work:memory#total" }
-Number Memory_Available_Percent      { channel="systeminfo:computer:work:memory#availablePercent" }
+Number Memory_Available              { channel="systeminfo:computer:openHABianPi:memory#available" }
+Number Memory_Used                   { channel="systeminfo:computer:openHABianPi:memory#used" }
+Number Memory_Total                  { channel="systeminfo:computer:openHABianPi:memory#total" }
+Number Memory_Available_Percent      { channel="systeminfo:computer:openHABianPi:memory#availablePercent" }
 
 /* Swap memory information*/
-Number Swap_Available                { channel="systeminfo:computer:work:swap#available" }
-Number Swap_Used                     { channel="systeminfo:computer:work:swap#used" }
-Number Swap_Total                    { channel="systeminfo:computer:work:swap#total" }
-Number Swap_Available_Percent        { channel="systeminfo:computer:work:swap#availablePercent" }
+Number Swap_Available                { channel="systeminfo:computer:wopenHABianPiork:swap#available" }
+Number Swap_Used                     { channel="systeminfo:computer:openHABianPi:swap#used" }
+Number Swap_Total                    { channel="systeminfo:computer:openHABianPi:swap#total" }
+Number Swap_Available_Percent        { channel="systeminfo:computer:openHABianPi:swap#availablePercent" }
 
 /* Battery information*/
-String Battery_Name                  { channel="systeminfo:computer:work:battery#name" }
-Number Battery_RemainingCapacity     { channel="systeminfo:computer:work:battery#remainingCapacity" }
-Number Battery_RemainingTime         { channel="systeminfo:computer:work:battery#remainingTime" }
+String Battery_Name                  { channel="systeminfo:computer:openHABianPi:battery#name" }
+Number Battery_RemainingCapacity     { channel="systeminfo:computer:openHABianPi:battery#remainingCapacity" }
+Number Battery_RemainingTime         { channel="systeminfo:computer:openHABianPi:battery#remainingTime" }
 
 /* Display information*/
-String Display_Description           { channel="systeminfo:computer:work:display#information" }
+String Display_Description           { channel="systeminfo:computer:openHABianPi:display#information" }
 
 /* Sensors information*/
-Number Sensor_CPUTemp                { channel="systeminfo:computer:work:sensors#cpuTemp" }
-Number Sensor_CPUVoltage             { channel="systeminfo:computer:work:sensors#cpuVoltage" }
-Number Sensor_FanSpeed               { channel="systeminfo:computer:work:sensors#fanSpeed" }
+Number Sensor_CPUTemp                { channel="systeminfo:computer:openHABianPi:sensors#cpuTemp" }
+Number Sensor_CPUVoltage             { channel="systeminfo:computer:openHABianPi:sensors#cpuVoltage" }
+Number Sensor_FanSpeed               { channel="systeminfo:computer:openHABianPi:sensors#fanSpeed" }
 
 /* Process information*/
-Number Process_load                  { channel="systeminfo:computer:SvilenV-L540:process#load" }
-Number Process_used                  { channel="systeminfo:computer:SvilenV-L540:process#used" }
-String Process_name                  { channel="systeminfo:computer:SvilenV-L540:process#name" }
-Number Process_threads               { channel="systeminfo:computer:SvilenV-L540:process#threads" }
-String Process_path                  { channel="systeminfo:computer:SvilenV-L540:process#path" }
+Number Process_load                  { channel="systeminfo:computer:openHABianPi:process#load" }
+Number Process_used                  { channel="systeminfo:computer:openHABianPi:process#used" }
+String Process_name                  { channel="systeminfo:computer:openHABianPi:process#name" }
+Number Process_threads               { channel="systeminfo:computer:openHABianPi:process#threads" }
+String Process_path                  { channel="systeminfo:computer:openHABianPi:process#path" }

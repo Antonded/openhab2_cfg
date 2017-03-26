@@ -1,4 +1,5 @@
 Switch Presence_Mobile_AD "Anton Mobile" <network> { channel="network:device:192_168_1_38:online" }
+
 Switch RELAY1 "RELAY1" <poweroutlet> { gpio="pin:6 activelow:yes" }
 Switch RELAY2 "RELAY2" <poweroutlet> { gpio="pin:12 activelow:yes" }
 Switch RELAY3 "RELAY3" <poweroutlet> { gpio="pin:13 activelow:yes" }
@@ -7,5 +8,3 @@ Switch RELAY5 "RELAY5" <poweroutlet> { gpio="pin:19 activelow:yes" }
 Switch RELAY6 "RELAY6" <poweroutlet> { gpio="pin:21 activelow:yes" }
 Switch RELAY7 "RELAY7" <poweroutlet> { gpio="pin:20 activelow:yes" }
 Switch RELAY8 "RELAY8" <poweroutlet> { gpio="pin:26 activelow:yes" }
-
-Number RaspberryCPUTemp  { channel="systeminfo:computer:openHABianPi:sensors#cpuTemp" }
