@@ -1,112 +1,121 @@
 sitemap default label="Home"
 {
-	Text item=System_Temperature_CPU label="Temperature [%.1f °C]" {
-		Frame {
-			Text item=System_Temperature_CPU
-			Text item=System_Temperature_GPU
+
+	Text item=CPU_Uptime label="System [%d]" {
+
+		Text item=System_Temperature_CPU label="Temperature [%.1f °C]" {
+
+			Frame {
+				Text item=System_Temperature_CPU
+				Text item=System_Temperature_GPU
+			}
+
+			Frame {
+				Switch item=System_Temperature_Chart_Period mappings=[0="1h", 1="4h", 2="8h", 3="12h", 4="24h"]
+				Chart  item=System_Temperature_Chart period=h   refresh=60000 visibility=[System_Temperature_Chart_Period==0, System_Temperature_Chart_Period=="Uninitialized"]
+				Chart  item=System_Temperature_Chart period=4h  refresh=60000 visibility=[System_Temperature_Chart_Period==1]
+				Chart  item=System_Temperature_Chart period=8h  refresh=60000 visibility=[System_Temperature_Chart_Period==2]
+				Chart  item=System_Temperature_Chart period=12h refresh=60000 visibility=[System_Temperature_Chart_Period==3]
+				Chart  item=System_Temperature_Chart period=D   refresh=60000 visibility=[System_Temperature_Chart_Period==4]
+			}
+
 		}
+
 		Frame {
-			Switch item=System_Temperature_Chart_Period mappings=[0="1h", 1="4h", 2="8h", 3="12h", 4="24h"]
-			Chart  item=System_Temperature_Chart period=h   refresh=60000 visibility=[System_Temperature_Chart_Period==0, System_Temperature_Chart_Period=="Uninitialized"]
-			Chart  item=System_Temperature_Chart period=4h  refresh=60000 visibility=[System_Temperature_Chart_Period==1]
-			Chart  item=System_Temperature_Chart period=8h  refresh=60000 visibility=[System_Temperature_Chart_Period==2]
-			Chart  item=System_Temperature_Chart period=12h refresh=60000 visibility=[System_Temperature_Chart_Period==3]
-			Chart  item=System_Temperature_Chart period=D   refresh=60000 visibility=[System_Temperature_Chart_Period==4]
+
+			Text item=Network_AdapterName label="Network_AdapterName [%s]"
+			Text item=Network_Name label="Network_Name [%s]"
+			Text item=Network_IP label="Network_IP [%s]"
+			Text item=Network_Mac label="Network_Mac [%s]"
+			Text item=Network_DataSent label="Network_DataSent [%d]"
+			Text item=Network_DataReceived label="Network_DataReceived [%d]"
+			Text item=Network_PackagesSent label="Network_PackagesSent [%d]"
+			Text item=Network_PackagesReceived label="Network_PackagesReceived [%d]"
+		}
+
+		Frame {
+
+			Text item=CPU_Name label="CPU_Name [%s]"
+			Text item=CPU_Description label="CPU_Description [%s]"
+			Text item=CPU_Load label="CPU_Load [%d]"
+			Text item=CPU_Load1 label="CPU_Load1 [%d]"
+			Text item=CPU_Load5 label="CPU_Load5 [%d]"
+			Text item=CPU_Load15 label="CPU_Load15 [%d]"
+			Text item=CPU_Threads label="CPU_Threads [%d]"
+			Text item=CPU_Uptime label="CPU_Uptime [%s]"
+		}
+
+		Frame {
+
+			Text item=Memory_Available label="Memory_Available [%d]"
+			Text item=Memory_Used label="Memory_Used [%d]"
+			Text item=Memory_Total label="Memory_Total [%d]"
+			Text item=Memory_Available_Percent label="Memory_Available_Percent [%d\%]"
+
+			Text item=Swap_Available label="Swap_Available [%d]"
+			Text item=Swap_Used label="Swap_Used [%d]"
+			Text item=Swap_Total label="Swap_Total [%d MB]"
+			Text item=Swap_Available_Percent label="Swap_Available_Percent [%d]"
+		}
+
+		Frame {
+
+			Text item=Process_load label="Process_load [%d]"
+			Text item=Process_used label="Process_used [%d]"
+			Text item=Process_name label="Process_name [%s]"
+			Text item=Process_threads label="Process_threads [%d]"
+			Text item=Process_path label="Process_path [%s]"
+		}
+
+		Frame {
+
+			Text item=Sensor_CPUTemp label="Sensor_CPUTemp [%d]"
+			Text item=Sensor_CPUVoltage label="Sensor_CPUVoltage [%d]"
+			Text item=Sensor_FanSpeed label="Sensor_FanSpeed [%d]"
+		}
+
+		Frame {
+
+			Text item=Drive_Name label="Drive_Name [%s]"
+			Text item=Drive_Model label="Drive_Model [%s]"
+			Text item=Drive_Serial label="Drive_Serial [%s]"
+
+			Text item=Storage_Name label="Storage_Name [%s]"
+			Text item=Storage_Type label="Storage_Type [%s]"
+			Text item=Storage_Description label="Storage_Description [%s]"
+			Text item=Storage_Available label="Storage_Available [%d]"
+			Text item=Storage_Used label="Storage_Used [%d]"
+			Text item=Storage_Total label="Storage_Total [%d]"
+			Text item=Storage_Available_Percent label="Storage_Available_Percent [%d\%]"
+		}
+
+		Frame {
+
+			Text item=Battery_Name label="Battery_Name [%s]"
+			Text item=Battery_RemainingCapacity label="Battery_RemainingCapacity [%d]"
+			Text item=Battery_RemainingTime label="Battery_RemainingTime [%d]"
+		}
+
+		Frame {
+
+			Text item=Display_Description label="Display_Description [%s]"
+		}
+	}
+
+	Text label "Devices" {
+		Frame {
+			Switch item=Presence_Mobile_AD label="Anton's Mobile"
 		}
 	}
 
 	Frame {
-    Switch item=Presence_Mobile_AD label="Anton's Mobile"
+		Switch item=RELAY1 label="RELAY1"
+		Switch item=RELAY2 label="RELAY2"
+		Switch item=RELAY3 label="RELAY3"
+		Switch item=RELAY4 label="RELAY4"
+		Switch item=RELAY5 label="RELAY5"
+		Switch item=RELAY6 label="RELAY6"
+		Switch item=RELAY7 label="RELAY7"
+		Switch item=RELAY8 label="RELAY8"
 	}
-
-
-		Text item=CPU_Uptime label="System [Uptime: %d]" {
-			Frame {
-		    Switch item=RELAY1 label="RELAY1"
-		    Switch item=RELAY2 label="RELAY2"
-		    Switch item=RELAY3 label="RELAY3"
-		    Switch item=RELAY4 label="RELAY4"
-		    Switch item=RELAY5 label="RELAY5"
-		    Switch item=RELAY6 label="RELAY6"
-		    Switch item=RELAY7 label="RELAY7"
-		    Switch item=RELAY8 label="RELAY8"
-			}
-
-			Frame {
-				Text item=Network_AdapterName label="Network_AdapterName [%s]"
-				Text item=Network_Name label="Network_Name [%s]"
-				Text item=Network_IP label="Network_IP [%s]"
-				Text item=Network_Mac label="Network_Mac [%s]"
-				Text item=Network_DataSent label="Network_DataSent [%d]"
-				Text item=Network_DataReceived label="Network_DataReceived [%d]"
-				Text item=Network_PackagesSent label="Network_PackagesSent [%d]"
-				Text item=Network_PackagesReceived label="Network_PackagesReceived [%d]"
-			}
-
-			Frame {
-				Text item=CPU_Name label="CPU_Name []"
-				Text item=CPU_Description label="CPU_Description []"
-				Text item=CPU_Load label="CPU_Load []"
-				Text item=CPU_Load1 label="CPU_Load1 []"
-				Text item=CPU_Load5 label="CPU_Load5 []"
-				Text item=CPU_Load15 label="CPU_Load15 []"
-				Text item=CPU_Threads label="CPU_Threads []"
-				Text item=CPU_Uptime label="CPU_Uptime [%d]"
-			}
-
-			Frame {
-
-				Text item=Memory_Available label=" []"
-				Text item=Memory_Used label=" []"
-				Text item=Memory_Total label=" []"
-				Text item=Memory_Available_Percent label=" []"
-
-				Text item=Swap_Available label=" []"
-				Text item=Swap_Used label=" []"
-				Text item=Swap_Total label=" []"
-				Text item=Swap_Available_Percent label=" []"
-			}
-
-			Frame {
-
-				Text item=Process_load label=" []"
-				Text item=Process_used label=" []"
-				Text item=Process_name label=" []"
-				Text item=Process_threads label=" []"
-				Text item=Process_path label=" []"
-			}
-
-			Frame {
-
-				Text item=Sensor_CPUTemp label=" []"
-				Text item=Sensor_CPUVoltage label=" []"
-				Text item=Sensor_FanSpeed label=" []"
-			}
-
-			Frame {
-				Text item=Drive_Name label=" []"
-				Text item=Drive_Model label=" []"
-				Text item=Drive_Serial label=" []"
-
-				Text item=Storage_Name label=" []"
-				Text item=Storage_Type label=" []"
-				Text item=Storage_Description label=" []"
-				Text item=Storage_Available label=" []"
-				Text item=Storage_Used label=" []"
-				Text item=Storage_Total label=" []"
-				Text item=Storage_Available_Percent label=" []"
-			}
-
-			Frame {
-
-				Text item=Battery_Name label=" []"
-				Text item=Battery_RemainingCapacity label=" []"
-				Text item=Battery_RemainingTime label=" []"
-			}
-
-			Frame {
-
-				Text item=Display_Description label=" []"
-			}
-		}
 }
