@@ -120,8 +120,8 @@ sitemap default label="Home"
 		Switch item=RELAY8 label="RELAY8"
 	}
 
-	Frame {
+/*	Frame {
 
-		Contact item=Button label="NC Push Button"
-	}
+		item=Button
+	}*/
 }
