@@ -8,3 +8,5 @@ Switch RELAY5 "RELAY5" <poweroutlet> { gpio="pin:19 activelow:yes" }
 Switch RELAY6 "RELAY6" <poweroutlet> { gpio="pin:13 activelow:yes" }
 Switch RELAY7 "RELAY7" <poweroutlet> { gpio="pin:12 activelow:yes" }
 Switch RELAY8 "RELAY8" <poweroutlet> { gpio="pin:6 activelow:yes" }
+
+Contact Button "NC Push Button" { gpio="pin:5 debounce:10 activelow:yes" }

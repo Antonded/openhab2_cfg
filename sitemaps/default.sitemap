@@ -109,7 +109,8 @@ sitemap default label="Home"
 	}
 
 	Frame {
-		Switch item=RELAY1 label="RELAY1"
+//	Switch item=RELAY1 label="RELAY1"
+		Switch item=RELAY1 label="Main light"
 		Switch item=RELAY2 label="RELAY2"
 		Switch item=RELAY3 label="RELAY3"
 		Switch item=RELAY4 label="RELAY4"
@@ -117,5 +118,10 @@ sitemap default label="Home"
 		Switch item=RELAY6 label="RELAY6"
 		Switch item=RELAY7 label="RELAY7"
 		Switch item=RELAY8 label="RELAY8"
+	}
+
+	Frame {
+
+		Contact item=Button label="NC Push Button"
 	}
 }
